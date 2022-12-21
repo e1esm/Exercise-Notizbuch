@@ -48,7 +48,7 @@ struct StepsProgressView: View{
                 )
             
             Circle()
-                .trim(from: 0, to: CGFloat(CGFloat(trainingViewModel.getCurrentSteps())/1000.0))
+                .trim(from: 0, to: CGFloat(CGFloat(trainingViewModel.getCurrentSteps())/CGFloat(trainingViewModel.getStepsGoal())))
                 .stroke(
                     Color(UIColor(red: 0.47, green: 0.78, blue: 1.00, alpha: 1.00)).opacity(1),
                     lineWidth: 20
