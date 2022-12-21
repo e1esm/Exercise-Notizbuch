@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1847A8295280A0009008DF /* StepsProgressView.swift */; };
+		BC5E2ED7294F5C7C006FEEE2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2ED6294F5C7C006FEEE2 /* DBManager.swift */; };
+		BC5E2F1F294F5E5A006FEEE2 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5E2F11294F5E32006FEEE2 /* SQLite.framework */; };
+		BC5E2F20294F5E5A006FEEE2 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5E2F11294F5E32006FEEE2 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */; };
+		BC5E2F25294F731E006FEEE2 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */; };
+		BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */; };
+		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
+		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
+		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
+		BCFBDEED2949237200E1DB3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEEC2949237200E1DB3A /* Preview Assets.xcassets */; };
+		BCFBDEEF2949237200E1DB3A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEEE2949237200E1DB3A /* Persistence.swift */; };
+		BCFBDEF22949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEF02949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld */; };
+		BCFBDEFE294924B000E1DB3A /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEFD294924B000E1DB3A /* TrainingModel.swift */; };
+		BCFBDF002949266E00E1DB3A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEFF2949266E00E1DB3A /* UserModel.swift */; };
+		BCFBDF022949368A00E1DB3A /* QuantityProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDF012949368A00E1DB3A /* QuantityProgressView.swift */; };
+		BCFBDF042949412700E1DB3A /* SportPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDF032949412700E1DB3A /* SportPicker.swift */; };
+		BCFBDF062949456700E1DB3A /* InputAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDF052949456700E1DB3A /* InputAmountView.swift */; };
+		BCFBDF0E294A21B600E1DB3A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDF0D294A21B600E1DB3A /* StringExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC5E2F10294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		BC5E2F12294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		BC5E2F14294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		BC5E2F16294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		BC5E2F18294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		BC5E2F1A294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		BC5E2F1C294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC5E2F21294F5E5A006FEEE2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC5E2F20294F5E5A006FEEE2 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC1847A8295280A0009008DF /* StepsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProgressView.swift; sourceTree = "<group>"; };
+		BC5E2ED6294F5C7C006FEEE2 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
+		BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
+		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BCFBDEE92949237200E1DB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCFBDEEC2949237200E1DB3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BCFBDEEE2949237200E1DB3A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		BCFBDEF12949237200E1DB3A /* SwiftExerciseTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftExerciseTracker.xcdatamodel; sourceTree = "<group>"; };
+		BCFBDEFD294924B000E1DB3A /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
+		BCFBDEFF2949266E00E1DB3A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BCFBDF012949368A00E1DB3A /* QuantityProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityProgressView.swift; sourceTree = "<group>"; };
+		BCFBDF032949412700E1DB3A /* SportPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportPicker.swift; sourceTree = "<group>"; };
+		BCFBDF052949456700E1DB3A /* InputAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAmountView.swift; sourceTree = "<group>"; };
+		BCFBDF0D294A21B600E1DB3A /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCFBDEDF2949237100E1DB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5E2F1F294F5E5A006FEEE2 /* SQLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC5E2F07294F5E31006FEEE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E2F11294F5E32006FEEE2 /* SQLite.framework */,
+				BC5E2F13294F5E32006FEEE2 /* SQLiteTests iOS.xctest */,
+				BC5E2F15294F5E32006FEEE2 /* SQLite.framework */,
+				BC5E2F17294F5E32006FEEE2 /* SQLiteTests Mac.xctest */,
+				BC5E2F19294F5E32006FEEE2 /* SQLite.framework */,
+				BC5E2F1B294F5E32006FEEE2 /* SQLiteTests tvOS.xctest */,
+				BC5E2F1D294F5E32006FEEE2 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC5E2F1E294F5E5A006FEEE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCFBDED92949237100E1DB3A = {
+			isa = PBXGroup;
+			children = (
+				BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */,
+				BCFBDEE32949237100E1DB3A /* Products */,
+				BC5E2F1E294F5E5A006FEEE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCFBDEE32949237100E1DB3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDF0C294A219F00E1DB3A /* Extensions */,
+				BCFBDEFC2949245400E1DB3A /* Views */,
+				BCFBDEFB2949244900E1DB3A /* Models */,
+				BCFBDEFA2949243800E1DB3A /* Database */,
+				BCFBDEF92949241300E1DB3A /* ViewModels */,
+				BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */,
+				BCFBDEE72949237100E1DB3A /* ContentView.swift */,
+				BCFBDEE92949237200E1DB3A /* Assets.xcassets */,
+				BCFBDEEE2949237200E1DB3A /* Persistence.swift */,
+				BCFBDEF02949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld */,
+				BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */,
+				BCFBDEEB2949237200E1DB3A /* Preview Content */,
+			);
+			path = SwiftExerciseTracker;
+			sourceTree = "<group>";
+		};
+		BCFBDEEB2949237200E1DB3A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDEEC2949237200E1DB3A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BCFBDEF92949241300E1DB3A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */,
+				BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BCFBDEFA2949243800E1DB3A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E2ED6294F5C7C006FEEE2 /* DBManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BCFBDEFB2949244900E1DB3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDEFD294924B000E1DB3A /* TrainingModel.swift */,
+				BCFBDEFF2949266E00E1DB3A /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCFBDEFC2949245400E1DB3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDF012949368A00E1DB3A /* QuantityProgressView.swift */,
+				BCFBDF032949412700E1DB3A /* SportPicker.swift */,
+				BCFBDF052949456700E1DB3A /* InputAmountView.swift */,
+				BC1847A8295280A0009008DF /* StepsProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCFBDF0C294A219F00E1DB3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BCFBDF0D294A21B600E1DB3A /* StringExtensions.swift */,
+				BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCFBDEE12949237100E1DB3A /* SwiftExerciseTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "SwiftExerciseTracker" */;
+			buildPhases = (
+				BCFBDEDE2949237100E1DB3A /* Sources */,
+				BCFBDEDF2949237100E1DB3A /* Frameworks */,
+				BCFBDEE02949237100E1DB3A /* Resources */,
+				BC5E2F21294F5E5A006FEEE2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftExerciseTracker;
+			productName = SwiftExerciseTracker;
+			productReference = BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCFBDEDA2949237100E1DB3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BCFBDEE12949237100E1DB3A = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "SwiftExerciseTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCFBDED92949237100E1DB3A;
+			productRefGroup = BCFBDEE32949237100E1DB3A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC5E2F07294F5E31006FEEE2 /* Products */;
+					ProjectRef = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BCFBDEE12949237100E1DB3A /* SwiftExerciseTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BC5E2F11294F5E32006FEEE2 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = BC5E2F10294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F13294F5E32006FEEE2 /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = BC5E2F12294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F15294F5E32006FEEE2 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = BC5E2F14294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F17294F5E32006FEEE2 /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = BC5E2F16294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F19294F5E32006FEEE2 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = BC5E2F18294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F1B294F5E32006FEEE2 /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = BC5E2F1A294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5E2F1D294F5E32006FEEE2 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = BC5E2F1C294F5E32006FEEE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCFBDEE02949237100E1DB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCFBDEED2949237200E1DB3A /* Preview Assets.xcassets in Resources */,
+				BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCFBDEDE2949237100E1DB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCFBDEEF2949237200E1DB3A /* Persistence.swift in Sources */,
+				BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */,
+				BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */,
+				BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */,
+				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
+				BCFBDF042949412700E1DB3A /* SportPicker.swift in Sources */,
+				BCFBDEF22949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld in Sources */,
+				BCFBDEFE294924B000E1DB3A /* TrainingModel.swift in Sources */,
+				BCFBDF0E294A21B600E1DB3A /* StringExtensions.swift in Sources */,
+				BCFBDF022949368A00E1DB3A /* QuantityProgressView.swift in Sources */,
+				BCFBDF002949266E00E1DB3A /* UserModel.swift in Sources */,
+				BCFBDF062949456700E1DB3A /* InputAmountView.swift in Sources */,
+				BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */,
+				BC5E2F25294F731E006FEEE2 /* TrainingViewModel.swift in Sources */,
+				BC5E2ED7294F5C7C006FEEE2 /* DBManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BCFBDEF32949237200E1DB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCFBDEF42949237200E1DB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCFBDEF62949237200E1DB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftExerciseTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = XLYPL49XW6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esm.SwiftExerciseTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCFBDEF72949237200E1DB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftExerciseTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = XLYPL49XW6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esm.SwiftExerciseTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "SwiftExerciseTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFBDEF32949237200E1DB3A /* Debug */,
+				BCFBDEF42949237200E1DB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "SwiftExerciseTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFBDEF62949237200E1DB3A /* Debug */,
+				BCFBDEF72949237200E1DB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCFBDEF02949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCFBDEF12949237200E1DB3A /* SwiftExerciseTracker.xcdatamodel */,
+			);
+			currentVersion = BCFBDEF12949237200E1DB3A /* SwiftExerciseTracker.xcdatamodel */;
+			path = SwiftExerciseTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BCFBDEDA2949237100E1DB3A /* Project object */;
+}
