@@ -23,7 +23,7 @@ class DBManager{
         let createFirstTableString = """
     CREATE TABLE IF NOT EXISTS User_info(
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    profileImage BLOB
+    profileImage BLOB);
     """
         let createSecondTableString = """
     CREATE TABLE IF NOT EXISTS Sports_info(

@@ -12,6 +12,7 @@ import CoreMotion
 struct ContentView: View {
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var trainingViewModel: TrainingViewModel
+    @State private var selectedTab: Tab = .house
     var body: some View {
         VStack{
                 Rectangle()
@@ -89,6 +90,9 @@ struct ContentView: View {
                         Spacer()
                             .frame(height: 35)
                         StepsProgressView()
+                        Spacer()
+                            .frame(minHeight: 35, maxHeight: 70)
+                        TabView(selectedTab: $selectedTab)
                         Spacer()
                     }
                 )

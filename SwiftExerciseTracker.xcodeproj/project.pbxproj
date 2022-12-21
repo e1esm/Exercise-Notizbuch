@@ -14,6 +14,7 @@
 		BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */; };
 		BC5E2F25294F731E006FEEE2 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */; };
 		BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */; };
+		BC86515D2953504300712068 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515C2953504300712068 /* TabBarView.swift */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
 		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BC86515C2953504300712068 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				BCFBDF032949412700E1DB3A /* SportPicker.swift */,
 				BCFBDF052949456700E1DB3A /* InputAmountView.swift */,
 				BC1847A8295280A0009008DF /* StepsProgressView.swift */,
+				BC86515C2953504300712068 /* TabBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				BCFBDEEF2949237200E1DB3A /* Persistence.swift in Sources */,
 				BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */,
+				BC86515D2953504300712068 /* TabBarView.swift in Sources */,
 				BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */,
 				BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */,
 				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
