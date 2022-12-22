@@ -18,7 +18,7 @@ struct TabView: View{
     @Binding var selectedTab: Tab
     private var circleImage: String{
         selectedTab.rawValue + ".circle"
-    }    
+    }
     var body: some View{
         HStack{
             ForEach(Tab.allCases, id: \.rawValue){tab in
@@ -38,9 +38,10 @@ struct TabView: View{
             }
         }
         .frame(width: 300,height: 50)
-        .background(Color(red: 0.88, green: 0.87, blue: 0.87))
+        .background(Color.clear)
         .cornerRadius(20)
         .padding()
     }
     
 }
+

@@ -92,7 +92,14 @@ struct ContentView: View {
                         StepsProgressView()
                         Spacer()
                             .frame(minHeight: 35, maxHeight: 70)
-                        TabView(selectedTab: $selectedTab)
+                        RoundedRectangle(
+                            cornerRadius: 32)
+                        .fill(Color(red: 0.88, green: 0.87, blue: 0.87))
+                        .frame(width: 325, height: 60)
+                        .overlay(
+                            TabView(selectedTab: $selectedTab)
+                            
+                        )
                         Spacer()
                     }
                 )
