@@ -21,7 +21,8 @@ class UserViewModel: ObservableObject{
             let username: String = randomNickname()
             userDefaults.set(username, forKey: "username")
             userDefaults.set(true, forKey: "isSoundPlayed")
-            userDefaults.set(UIImage(named: "profileImage"), forKey: "profileImage")
+            saveProfileImage(newProfileImage: UIImage(named: "profileImage")!)
+            //userDefaults.set(UIImage(named: "profileImage"), forKey: "profileImage")
             userDefaults.set(DateFormatter().string(from: Date()), forKey: "lastOpening")
             self.userModel = UserModel(true,sound: true, nickname: username, profilePhoto: UIImage(named: "profileImage")!)
         }else{
@@ -66,6 +67,11 @@ class UserViewModel: ObservableObject{
         return String((0..<6).map{ _ in letters.randomElement()! })
     }
     
+    func updateUserName(newUsername: String){
+        userModel?.setNickname(newNickanem: newUsername)
+        userDefaults.set(newUsername, forKey: "username")
+        self.objectWillChange.send()
+    }
     
     
 }

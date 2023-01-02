@@ -18,6 +18,8 @@
 		BC86515D2953504300712068 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515C2953504300712068 /* TabBarView.swift */; };
 		BC86516029538A9C00712068 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515F29538A9C00712068 /* HistoryView.swift */; };
 		BC86516929538AD000712068 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86516829538AD000712068 /* ProfileView.swift */; };
+		BCCCE196296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */; };
+		BCCCE1A02963438100A44502 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = BCCCE19F2963438100A44502 /* HalfASheet */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
 		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
@@ -110,6 +112,7 @@
 		BC86515C2953504300712068 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		BC86515F29538A9C00712068 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BC86516829538AD000712068 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSportTypesAvailabilityPicker.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5E2F1F294F5E5A006FEEE2 /* SQLite.framework in Frameworks */,
+				BCCCE1A02963438100A44502 /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +244,7 @@
 				BC86515F29538A9C00712068 /* HistoryView.swift */,
 				BC86516829538AD000712068 /* ProfileView.swift */,
 				BC44273629624B0200CB9E71 /* MainView.swift */,
+				BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +275,9 @@
 			dependencies = (
 			);
 			name = SwiftExerciseTracker;
+			packageProductDependencies = (
+				BCCCE19F2963438100A44502 /* HalfASheet */,
+			);
 			productName = SwiftExerciseTracker;
 			productReference = BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -298,6 +306,9 @@
 				Base,
 			);
 			mainGroup = BCFBDED92949237100E1DB3A;
+			packageReferences = (
+				BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */,
+			);
 			productRefGroup = BCFBDEE32949237100E1DB3A /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -386,6 +397,7 @@
 				BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */,
 				BC86515D2953504300712068 /* TabBarView.swift in Sources */,
 				BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */,
+				BCCCE196296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift in Sources */,
 				BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */,
 				BC44273729624B0200CB9E71 /* MainView.swift in Sources */,
 				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
@@ -605,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCCCE19F2963438100A44502 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BCFBDEF02949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld */ = {

@@ -40,7 +40,9 @@ struct TabViewScreen: View{
                         Text("Profile")
                     }
                 }
-        }}
+        }
+        
+    }
     
 }
 

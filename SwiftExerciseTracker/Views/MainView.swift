@@ -29,12 +29,13 @@ struct MainView : View{
                                     .overlay(
                                         HStack{
                                             Spacer()
-                                                .frame(minWidth: 20, maxWidth: 25)
+                                                .frame(minWidth: 15, maxWidth: 20)
                                             Text(userViewModel.userModel!.getNickname())
-                                                .frame(alignment: .leading)
+                                                .frame(width: 85,alignment: .leading)
+                                                .lineLimit(1)
                                                 .font(Font.headline.bold())
                                             Spacer()
-                                                .frame(minWidth: 7, maxWidth: 11)
+                                                .frame(minWidth: 1, maxWidth: 3)
                                             
                                                     Image(uiImage: userViewModel.userModel!.getImage())
                                                         .resizable()

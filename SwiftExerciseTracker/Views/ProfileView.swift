@@ -8,13 +8,15 @@
 import Foundation
 import SwiftUI
 import PhotosUI
-
+import HalfASheet
 struct ProfileView: View{
+    @State var newUsername: String = ""
+    @State private var isShowingSheet = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
     @EnvironmentObject var userViewModel: UserViewModel
     var body: some View{
-        VStack(spacing: 20){
+        VStack(){
             Rectangle()
                 .padding(-85)
                 .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
@@ -44,11 +46,57 @@ struct ProfileView: View{
                         Text(userViewModel.userModel!.getNickname())
                             .font(.title2
                                 .weight(.bold))
+                            .frame(width: 100)
                     }.frame(alignment: .top)
                 )
             Spacer()
+                .frame(minHeight: 20, maxHeight: 50)
+            
+            RoundedRectangle(cornerRadius: 32)
+                .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
+                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
+                .overlay(
+                    HStack(spacing: 100){
+                        Text("Pick active sport")
+                        ZStack{
+                            Button("Show sheet"){
+                                isShowingSheet.toggle()
+                            }.sheet(isPresented: $isShowingSheet){
+                                SheetSportPickerView()
+                            }
+                        }
+                    }
+
+                )
+            Spacer()
+                .frame(minHeight: 10, maxHeight: 30)
+            RoundedRectangle(cornerRadius: 32)
+                .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
+                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
+                .overlay(
+                
+                    HStack{
+                        Spacer()
+                            .frame(width: 5)
+                        Text("Change nickname")
+                            .frame(width: 150)
+                        Spacer()
+                            .frame(width: 100)
+                        TextField("Nickname:", text: $newUsername){
+                            
+                        }.onSubmit {
+                            userViewModel.updateUserName(newUsername: newUsername)
+                            newUsername = ""
+                        }.frame(width: 100)
+                    }
+                
+                )
+            
+            Spacer()
             Text("Version 0.0.0")
             
-        }
+        }.background(Color(red: 0.97, green: 0.95, blue: 0.95))
     }
 }
