@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1847A8295280A0009008DF /* StepsProgressView.swift */; };
+		BC44273729624B0200CB9E71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44273629624B0200CB9E71 /* MainView.swift */; };
 		BC5E2ED7294F5C7C006FEEE2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2ED6294F5C7C006FEEE2 /* DBManager.swift */; };
 		BC5E2F1F294F5E5A006FEEE2 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5E2F11294F5E32006FEEE2 /* SQLite.framework */; };
 		BC5E2F20294F5E5A006FEEE2 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5E2F11294F5E32006FEEE2 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		BC1847A8295280A0009008DF /* StepsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProgressView.swift; sourceTree = "<group>"; };
+		BC44273529624A3700CB9E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BC44273629624B0200CB9E71 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BC5E2ED6294F5C7C006FEEE2 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				BC44273529624A3700CB9E71 /* Info.plist */,
 				BCFBDF0C294A219F00E1DB3A /* Extensions */,
 				BCFBDEFC2949245400E1DB3A /* Views */,
 				BCFBDEFB2949244900E1DB3A /* Models */,
@@ -235,6 +239,7 @@
 				BC86515C2953504300712068 /* TabBarView.swift */,
 				BC86515F29538A9C00712068 /* HistoryView.swift */,
 				BC86516829538AD000712068 /* ProfileView.swift */,
+				BC44273629624B0200CB9E71 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				BC86515D2953504300712068 /* TabBarView.swift in Sources */,
 				BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */,
 				BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */,
+				BC44273729624B0200CB9E71 /* MainView.swift in Sources */,
 				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
 				BCFBDF042949412700E1DB3A /* SportPicker.swift in Sources */,
 				BCFBDEF22949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld in Sources */,
@@ -451,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -505,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -526,9 +532,9 @@
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftExerciseTracker/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -557,9 +563,9 @@
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftExerciseTracker/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

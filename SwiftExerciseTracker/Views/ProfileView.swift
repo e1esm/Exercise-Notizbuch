@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct ProfileView{
+struct ProfileView: View{
     var body: some View{
         
         ZStack{
