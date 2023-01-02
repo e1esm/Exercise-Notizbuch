@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct MainView : View{
+    @EnvironmentObject var sportService: SportService
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var trainingViewModel: TrainingViewModel
         var body: some View {

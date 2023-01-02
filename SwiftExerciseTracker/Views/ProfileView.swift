@@ -93,6 +93,26 @@ struct ProfileView: View{
                     }
                 
                 )
+            Spacer()
+                .frame(minHeight: 10, maxHeight: 30)
+            RoundedRectangle(cornerRadius: 32)
+                .foregroundColor(Color(red:0.88, green: 0.87, blue: 0.87))
+                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
+                .overlay(
+                    HStack(spacing: 110){
+                        Text("Change goals")
+                        ZStack{
+                            Button("Show sheet"){
+                                isShowingSheet.toggle()
+                            }.sheet(isPresented: $isShowingSheet){
+                                GoalChangerView()
+                            }
+                            
+                        }
+                    }
+                
+                )
             
             Spacer()
             Text("Version 0.0.0")

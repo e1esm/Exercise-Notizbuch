@@ -12,9 +12,12 @@ import SwiftUI
 struct SheetSportPickerView : View{
     @Environment(\.dismiss) var dismiss
     var body: some View{
-        Text("Hello world")
-        Button("Press to dismiss"){
-            dismiss()
-        }
+        VStack{
+            Spacer()
+            Button("Press to dismiss"){
+                dismiss()
+            }
+        }.frame(width: UIScreen.main.bounds.width).background(Color(red: 0.97, green: 0.95, blue: 0.95))
+        
     }
 }

@@ -11,6 +11,7 @@ import SQLite3
 
 class TrainingViewModel: ObservableObject{
     
+
     var dbManager: DBManager
     var trainingModel: TrainingModel
     

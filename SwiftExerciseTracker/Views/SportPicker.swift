@@ -12,13 +12,22 @@ import SwiftUI
 struct SportPicker: View{
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var sportService: SportService
     @State private var currentSport = "Sit-ups"
+    var sportOptions: [String]{
+        get{
+            initSportArray()
+        }
+    }
     
+    
+    //let sportOptions = Array(SportRepository.activeSport.keys)
+    /*
     let sportOptions = [    "Sit-ups",
                              "Push-ups",
                              "Abs",
                              "Lunges",]
-    
+    */
     var body: some View{
         VStack{
             Picker("Sport:", selection: $currentSport){
@@ -32,5 +41,9 @@ struct SportPicker: View{
             }
             .pickerStyle(.menu)
         }
+    }
+    
+    func initSportArray() -> [String]{
+        return sportService.activeSport
     }
 }
