@@ -29,16 +29,36 @@ class UserViewModel: ObservableObject{
             let username = userDefaults.string(forKey: "username")
             let isSoundPlayed = userDefaults.bool(forKey: "isSoundPlayed")
             
-            let profileImage = userDefaults.object(forKey: "profileImage") ?? nil
+            let profileImage = getProfileImage()
             
             if profileImage == nil{
                 userModel = UserModel(isSignedUp, sound: isSoundPlayed, nickname: username!, profilePhoto: UIImage(named: "profileImage")!)
             }else{
-                userModel = UserModel(isSignedUp, sound: isSoundPlayed, nickname: username!, profilePhoto: profileImage as! UIImage)
+                userModel = UserModel(isSignedUp, sound: isSoundPlayed, nickname: username!, profilePhoto: profileImage!)
             }
             
         }
         
+    }
+    
+    func updateProfileImage(newImage: UIImage){
+        userModel?.setNewImage(image: newImage)
+        print("Image's updated")
+        saveProfileImage(newProfileImage: newImage)
+        self.objectWillChange.send()
+        
+    }
+    
+    func saveProfileImage(newProfileImage: UIImage){
+        guard let data = newProfileImage.jpegData(compressionQuality: 0.5) else {return}
+        let encodedImageData = try! PropertyListEncoder().encode(data)
+        userDefaults.set(encodedImageData, forKey: "profileImage")
+    }
+    
+    func getProfileImage() -> UIImage?{
+        guard let data = userDefaults.data(forKey: "profileImage") else {return nil}
+        let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
+        return UIImage(data: decoded)
     }
     
     func randomNickname() -> String {

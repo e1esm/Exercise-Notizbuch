@@ -14,7 +14,6 @@ class UserModel{
     private var nickname: String
     private var isSoundPlayed: Bool
     private var isSignedUp: Bool
-    //private var profileImage: UIImage?
     private var profileImage: UIImage = UIImage(named: "profileImage")!
     init(){
         isSignedUp = false

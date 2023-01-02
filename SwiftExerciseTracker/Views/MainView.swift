@@ -35,10 +35,13 @@ struct MainView : View{
                                                 .font(Font.headline.bold())
                                             Spacer()
                                                 .frame(minWidth: 7, maxWidth: 11)
-                                            Image(uiImage: userViewModel.userModel!.getImage())
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 50, height: 50, alignment: .trailing)
+                                            
+                                                    Image(uiImage: userViewModel.userModel!.getImage())
+                                                        .resizable()
+                                                        .frame(width: 50, height: 50)
+                                                        .clipShape(Circle())
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .overlay(Circle().stroke(Color.black, lineWidth: 2))
                                         }
                                     )
                                     .frame(width: 150, height: 50, alignment: .trailing)
