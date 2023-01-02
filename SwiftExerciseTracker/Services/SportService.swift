@@ -9,11 +9,12 @@ import Foundation
 
 class SportService: ObservableObject{
     var userDefaults = UserDefaults.standard
+    var sportRepository = SportRepository()
     var activeSport: [String]
     
     init(){
         activeSport = []
-        userDefaults.set(SportRepository.activeSport, forKey: "activeSports")
+        userDefaults.set(sportRepository.activeSport, forKey: "activeSports")
         updateActiveSportArray()
     }
     
@@ -28,12 +29,9 @@ class SportService: ObservableObject{
     }
     
     func changeStateOfSportArray(key: String, state: Bool){
-        SportRepository.activeSport[key] = state
-        userDefaults.set(SportRepository.activeSport, forKey: "activeSports")
+        sportRepository.activeSport[key] = state
+        userDefaults.set(sportRepository.activeSport, forKey: "activeSports")
         updateActiveSportArray()
         self.objectWillChange.send()
     }
-    
-    
-    
 }

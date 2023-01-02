@@ -9,7 +9,7 @@ import Foundation
 
 class SportRepository{
     var userDefaults = UserDefaults.standard
-    static var activeSport: [String: Bool] = [
+    var activeSport: [String: Bool] = [
         "Push-ups": true,
         "Sit-ups": true,
         "Abs": true,
@@ -17,14 +17,13 @@ class SportRepository{
         "Pull-Ups": true,
         "Burpee": true
         ]
-    
     init(){
-        userDefaults.set(SportRepository.activeSport, forKey: "activeSport")
+        activeSport = userDefaults.object(forKey: "activeSports") as! [String : Bool]
     }
     
     func changeState(key: String, state: Bool){
-        SportRepository.activeSport[key] = state
-        userDefaults.set(SportRepository.activeSport, forKey: "activeSport")
+        activeSport[key] = state
+        userDefaults.set(activeSport, forKey: "activeSports")
     }
     
     func updateState(){

@@ -21,7 +21,8 @@ class TrainingViewModel: ObservableObject{
     }
     
     
-    public func updateCurrentAmount(){
+    public func updateCurrentAmount(type: String){
+        trainingModel.type = type
         trainingModel.currentAmount = 0
         self.objectWillChange.send()
     }

@@ -14,10 +14,15 @@ struct SportPicker: View{
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var sportService: SportService
     @State private var currentSport = "Sit-ups"
+    @State private var nonwriteable: Bool
     var sportOptions: [String]{
         get{
             initSportArray()
         }
+    }
+    
+    init(){
+        nonwriteable = false
     }
     
     
@@ -37,10 +42,11 @@ struct SportPicker: View{
             }
             .accentColor(.black)
             .onChange(of: currentSport){newValue in
-                trainingViewModel.updateCurrentAmount()
+                trainingViewModel.updateCurrentAmount(type: newValue)
             }
             .pickerStyle(.menu)
         }
+        
     }
     
     func initSportArray() -> [String]{

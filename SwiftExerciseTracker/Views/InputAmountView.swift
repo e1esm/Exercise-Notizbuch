@@ -12,12 +12,17 @@ import SwiftUI
 struct InputAmountView: View{
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var trainingViewModel: TrainingViewModel
-
+    
     @State var amount: String
     @State var showingAlert: Bool
+    @State var isNotRightType: Bool
     var body: some View{
         TextField("Done quantity:", text: $amount){
             showingAlert = amount.isNumeric
+            if trainingViewModel.trainingModel.type == "" {
+                isNotRightType = true
+            }
+            
             if !showingAlert{
                 trainingViewModel.increaseBy(amount: Int(amount)!)
             }
@@ -25,9 +30,18 @@ struct InputAmountView: View{
         }
         .onSubmit {
             amount = ""
+            print(trainingViewModel.trainingModel.type)
         }
         .submitLabel(.done)
         .multilineTextAlignment(.center)
+        .alert(isPresented: $isNotRightType){
+            Alert(
+                title: Text("Invalid sport type"),
+                message: Text("Change your current sport"),
+                dismissButton: .default(Text("Got it."))
+            )
+            
+        }
                     .alert(isPresented: $showingAlert){
                         Alert(
                             title: Text("Invalid input"),
@@ -39,6 +53,7 @@ struct InputAmountView: View{
     init(){
             amount = ""
             showingAlert = false
+            isNotRightType = false
         }
         
     }

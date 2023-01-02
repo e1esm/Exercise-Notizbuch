@@ -11,7 +11,8 @@ import PhotosUI
 import HalfASheet
 struct ProfileView: View{
     @State var newUsername: String = ""
-    @State private var isShowingSheet = false
+    @State private var isShowingActiveSheet = false
+    @State private var isShowingGoalSheet = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
     @EnvironmentObject var userViewModel: UserViewModel
@@ -61,8 +62,8 @@ struct ProfileView: View{
                         Text("Pick active sport")
                         ZStack{
                             Button("Show sheet"){
-                                isShowingSheet.toggle()
-                            }.sheet(isPresented: $isShowingSheet){
+                                isShowingActiveSheet.toggle()
+                            }.sheet(isPresented: $isShowingActiveSheet){
                                 SheetSportPickerView()
                             }
                         }
@@ -104,8 +105,8 @@ struct ProfileView: View{
                         Text("Change goals")
                         ZStack{
                             Button("Show sheet"){
-                                isShowingSheet.toggle()
-                            }.sheet(isPresented: $isShowingSheet){
+                                isShowingGoalSheet.toggle()
+                            }.sheet(isPresented: $isShowingGoalSheet){
                                 GoalChangerView()
                             }
                             
