@@ -19,43 +19,47 @@ struct ProfileView: View{
     var body: some View{
         VStack(){
             Rectangle()
-                .padding(-85)
+                .padding(-80)
                 .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
                 .frame(width: UIScreen.main.bounds.width, height: 50)
                 .ignoresSafeArea()
                 .overlay(
-                    HStack(spacing: 100){
-                        PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()){
-                            
-                            Image(uiImage: userViewModel.userModel!.getImage())
-                                .resizable()
-                                .frame(width: 75, height: 75)
-                                .clipShape(Circle())
-                                .aspectRatio(contentMode: .fit)
-                                .overlay(Circle().stroke(Color.black, lineWidth: 2))
-                             
-                            
-                        }.onChange(of: selectedItem){ newItem in
-                            Task{
-                                if let data = try? await newItem?.loadTransferable(type: Data.self){
-                                    selectedImageData = data
-                                    userViewModel.updateProfileImage(newImage: UIImage(data: selectedImageData!)!)
+                    VStack{
+                        Spacer()
+                            .frame(height: 20)
+                        HStack(spacing: 100){
+                            PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()){
+                                
+                                Image(uiImage: userViewModel.userModel!.getImage())
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                                    .clipShape(Circle())
+                                    .aspectRatio(contentMode: .fit)
+                                    .overlay(Circle().stroke(Color.black, lineWidth: 2))
+                                
+                                
+                            }.onChange(of: selectedItem){ newItem in
+                                Task{
+                                    if let data = try? await newItem?.loadTransferable(type: Data.self){
+                                        selectedImageData = data
+                                        userViewModel.updateProfileImage(newImage: UIImage(data: selectedImageData!)!)
+                                    }
                                 }
+                                
                             }
-                            
-                        }
-                        Text(userViewModel.userModel!.getNickname())
-                            .font(.title2
-                                .weight(.bold))
-                            .frame(width: 100)
-                    }.frame(alignment: .top)
+                            Text(userViewModel.userModel!.getNickname())
+                                .font(.title2
+                                    .weight(.bold))
+                                .frame(width: 100)
+                        }.frame(alignment: .bottom)
+                    }
                 )
             Spacer()
                 .frame(minHeight: 20, maxHeight: 50)
             
             RoundedRectangle(cornerRadius: 32)
                 .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
-                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .frame(minWidth: 250, maxWidth: 350, minHeight: 25, maxHeight: 75)
                 .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
                 .overlay(
                     HStack(spacing: 100){
@@ -74,7 +78,7 @@ struct ProfileView: View{
                 .frame(minHeight: 10, maxHeight: 30)
             RoundedRectangle(cornerRadius: 32)
                 .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
-                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .frame(minWidth: 250, maxWidth: 350, minHeight: 25, maxHeight: 75)
                 .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
                 .overlay(
                 
@@ -98,7 +102,7 @@ struct ProfileView: View{
                 .frame(minHeight: 10, maxHeight: 30)
             RoundedRectangle(cornerRadius: 32)
                 .foregroundColor(Color(red:0.88, green: 0.87, blue: 0.87))
-                .frame(minWidth: 350, maxWidth: 400, minHeight: 25, maxHeight: 75)
+                .frame(minWidth: 250, maxWidth: 350, minHeight: 25, maxHeight: 75)
                 .shadow(color: Color(red: 0.88, green: 0.87, blue: 0.87), radius: 16)
                 .overlay(
                     HStack(spacing: 110){

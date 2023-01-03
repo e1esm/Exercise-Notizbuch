@@ -71,9 +71,10 @@ class DBManager{
     }
     
     private func createDatabase()-> OpaquePointer?{
-        let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathExtension(path)
+        let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(path)
         print(filePath)
         var db: OpaquePointer? = nil
+        print(filePath)
         if sqlite3_open(filePath.path, &db) != SQLITE_OK{
             print("An error occured")
             return nil

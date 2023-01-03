@@ -18,7 +18,12 @@ class SportRepository{
         "Burpee": true
         ]
     init(){
-        activeSport = userDefaults.object(forKey: "activeSports") as! [String : Bool]
+        if(userDefaults.object(forKey: "activeSports") == nil){
+            userDefaults.set(activeSport, forKey: "activeSports")
+        }else{
+            activeSport = userDefaults.object(forKey: "activeSports") as! [String : Bool]
+        }
+
     }
     
     func changeState(key: String, state: Bool){

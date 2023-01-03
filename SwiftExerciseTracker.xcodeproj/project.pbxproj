@@ -23,6 +23,7 @@
 		BCCCE1A22963550800A44502 /* GoalChangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A12963550800A44502 /* GoalChangerView.swift */; };
 		BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A42963560100A44502 /* ActiveSports.swift */; };
 		BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AB29635FB400A44502 /* SportService.swift */; };
+		BCCCE1AE2963B07300A44502 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AD2963B07200A44502 /* SoundService.swift */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
 		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
@@ -119,6 +120,7 @@
 		BCCCE1A12963550800A44502 /* GoalChangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalChangerView.swift; sourceTree = "<group>"; };
 		BCCCE1A42963560100A44502 /* ActiveSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSports.swift; sourceTree = "<group>"; };
 		BCCCE1AB29635FB400A44502 /* SportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportService.swift; sourceTree = "<group>"; };
+		BCCCE1AD2963B07200A44502 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				BCCCE1AB29635FB400A44502 /* SportService.swift */,
+				BCCCE1AD2963B07200A44502 /* SoundService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */,
 				BCCCE196296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift in Sources */,
 				BC1847A9295280A0009008DF /* StepsProgressView.swift in Sources */,
+				BCCCE1AE2963B07300A44502 /* SoundService.swift in Sources */,
 				BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */,
 				BC44273729624B0200CB9E71 /* MainView.swift in Sources */,
 				BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */,

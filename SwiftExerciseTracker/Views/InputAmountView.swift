@@ -8,11 +8,9 @@
 import Foundation
 import SwiftUI
 
-
 struct InputAmountView: View{
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var trainingViewModel: TrainingViewModel
-    
     @State var amount: String
     @State var showingAlert: Bool
     @State var isNotRightType: Bool
@@ -27,8 +25,12 @@ struct InputAmountView: View{
                 trainingViewModel.increaseBy(amount: Int(amount)!)
             }
             print("====\n\(trainingViewModel.getCurrentAmount()) in InputAmountView and \(amount) in IAV")
+
         }
         .onSubmit {
+            if(trainingViewModel.getCurrentAmount() == trainingViewModel.getGoalInQuantity()){
+                SoundService.playSounds(soundFile: "mixkit-quick-win-video-game-notification-269")
+            }
             amount = ""
             print(trainingViewModel.trainingModel.type)
         }
@@ -55,6 +57,20 @@ struct InputAmountView: View{
             showingAlert = false
             isNotRightType = false
         }
-        
-    }
     
+    //achieved-sound.wav
+    /*
+    func playSoundWhenAchieved(sound: String, ofType: String){
+        print("Sound played")
+        if let path = Bundle.main.path(forResource: sound, ofType: ofType){
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(filePath: path))
+                audioPlayer?.play()
+            }catch{
+                print("Audio can't be played")
+            }
+        }
+    }
+     */
+        
+}

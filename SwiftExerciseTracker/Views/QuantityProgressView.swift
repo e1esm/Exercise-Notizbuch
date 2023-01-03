@@ -7,10 +7,13 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
+
 
 struct QuantityProgressView : View{
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @EnvironmentObject var userViewModel: UserViewModel
+
     var body: some View{
         ZStack{
             Circle()
@@ -23,7 +26,6 @@ struct QuantityProgressView : View{
                     Text("\(trainingViewModel.getCurrentAmount()) / \(trainingViewModel.getGoalInQuantity())")
                         .font(.title2)
                 )
-            
             Circle()
                 .trim(from: 0, to: CGFloat(CGFloat(trainingViewModel.getCurrentAmount()) / 100.0))
                 .stroke(
@@ -36,6 +38,8 @@ struct QuantityProgressView : View{
         }
             
     }
+    
+
     
 
 }

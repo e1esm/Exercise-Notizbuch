@@ -23,16 +23,16 @@ struct HistoryView: View{
                             x: .value("Mount", "jan/22"),
                             y: .value("Value", 5)
                         )
-                        .foregroundStyle(Color.green)
+                        .foregroundStyle(Color(UIColor(red: 0.71, green: 0.95, blue: 0.77, alpha: 1.00)).opacity(1))
                         BarMark(
                             x: .value("Mount", "fev/22"),
                             y: .value("Value", 4)
                         )
-                        .foregroundStyle(Color.green)
+                        .foregroundStyle(Color(UIColor(red: 0.71, green: 0.95, blue: 0.77, alpha: 1.00)).opacity(1))
                         BarMark(
                             x: .value("Mount", "mar/22"),
                             y: .value("Value", 7)
-                        ).foregroundStyle(Color.green)
+                        ).foregroundStyle(Color(UIColor(red: 0.71, green: 0.95, blue: 0.77, alpha: 1.00)).opacity(1))
                     }
                     .frame(minWidth: 100, maxWidth: 400, minHeight: 100, maxHeight: 200)
                     SportPicker()
@@ -40,16 +40,16 @@ struct HistoryView: View{
                 Divider()
                 
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 400, height: 200)
+                    .frame(minWidth: 250, maxWidth: 350, minHeight: 100, maxHeight: 200)
                     .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 400, height: 200)
+                        .frame(minWidth: 250, maxWidth: 350, minHeight: 100, maxHeight: 200)
                     .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 400, height: 200)
+                        .frame(minWidth: 250, maxWidth: 350, minHeight: 100, maxHeight: 200)
                     .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 400, height: 200)
+                        .frame(minWidth: 250, maxWidth: 350, minHeight: 100, maxHeight: 200)
                     .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
             }
 
