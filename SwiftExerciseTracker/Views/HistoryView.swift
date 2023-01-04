@@ -106,9 +106,11 @@ struct HistoryView: View{
                                     }
                                     VStack(spacing: 20){
                                         Text(value.getSportType())
+                                            .frame(width: 125)
                                         .foregroundColor(Color.black)
                                         .bold()
                                         Text(String(value.getCurrentQuantity()))
+                                            .frame(width: 75)
                                         .foregroundColor(Color.black)
                                         .bold()
                                     }
@@ -158,7 +160,7 @@ struct HistoryView: View{
             }
             .onAppear{
                 refreshActivityArray()
-                print(trainingViewModel.getArrayOfWeekActivities()[0].getSportType())
+                //print(trainingViewModel.getArrayOfWeekActivities()[0].getSportType())
                 print(trainingViewModel.getArrayOfWeekActivities().count)
             }
             .background(Color(red: 0.97, green: 0.95, blue: 0.95))

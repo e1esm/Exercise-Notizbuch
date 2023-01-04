@@ -32,7 +32,7 @@ struct MainView : View{
                                             Spacer()
                                                 .frame(minWidth: 15, maxWidth: 20)
                                             Text(userViewModel.userModel!.getNickname())
-                                                .frame(width: 85,alignment: .leading)
+                                                .frame(width: 85,alignment: .center)
                                                 .lineLimit(1)
                                                 .font(Font.headline.bold())
                                             Spacer()

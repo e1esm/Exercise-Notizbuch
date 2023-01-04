@@ -12,7 +12,11 @@ class TrainingModel{
     var currentAmountForProgressBar: Int
     var goalInQuantity: Int
     var type: String
-    var goalInSteps: Int
+    var goalInSteps: Int{
+        get{
+            UserDefaults.standard.integer(forKey: "StepsGoal")
+        }
+    }
     var currentSteps: Int
     
     init(currentAmount: Int, currentAmountForProgressBar: Int, goalInQuantity: Int, type: String = "Sit-ups", goalInSteps: Int, currentSteps: Int) {
@@ -20,7 +24,7 @@ class TrainingModel{
         self.currentAmountForProgressBar = currentAmountForProgressBar
         self.goalInQuantity = goalInQuantity
         self.type = type
-        self.goalInSteps = goalInSteps
+        //self.goalInSteps = goalInSteps
         self.currentSteps = currentSteps
     }
     
@@ -28,8 +32,9 @@ class TrainingModel{
         currentAmount = 0;
         currentAmountForProgressBar = 0
         goalInQuantity = 100
-        goalInSteps = 1000
+        //goalInSteps = 1000
         if (UserDefaults.standard.string(forKey: "lastSet")) == nil {
+            UserDefaults.standard.set(1000, forKey: "StepsGoal")
             type = "Sit-ups"
             let sportRepoKeys = UserDefaults.standard.object(forKey: "activeSports") as! [String: Bool]
             for sport in Array(sportRepoKeys.keys){

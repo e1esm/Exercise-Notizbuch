@@ -22,7 +22,7 @@ struct StepsProgressView: View{
     
     private func initPedometer(){
         if isPedometerAvailable{
-            pedometer.startUpdates(from: Date()){(data, error) in
+            pedometer.startUpdates(from: Date().startOfDay){(data, error) in
                 guard let data = data, error == nil else {return}
                 
                 print("\(data.numberOfSteps.intValue)")

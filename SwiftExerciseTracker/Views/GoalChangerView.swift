@@ -16,6 +16,7 @@ struct GoalChangerView: View{
     private var userDefaults = UserDefaults.standard
     @State private var isCurrent: Bool = false
     @State private var desiredAmount: String = ""
+    @State private var pickedSport: String?
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
         var body: some View{
             VStack{
@@ -24,20 +25,6 @@ struct GoalChangerView: View{
                         .frame(height: 50)
                     LazyVGrid(columns: columns, spacing: 70){
                         ForEach(Array(sportService.sportRepository.activeSport.keys), id: \.self){ value in
-                            if(sportService.sportRepository.activeSport[value] == false){
-                                Text("\(value)\n\(userDefaults.integer(forKey: "\(value)Goal"))")
-                                    .multilineTextAlignment(.center)
-                                    .padding()
-                                    .background(
-                                        Circle()
-                                            .stroke(Color.black, lineWidth: 2)
-                                            .frame(width: 100, height: 100)
-                                            .padding(6)
-                                    )
-                                    .onTapGesture {
-                                       isCurrent = true
-                                    }
-                            }else{
                                 Text("\(value)\n\(userDefaults.integer(forKey: "\(value)Goal"))")
                                     .multilineTextAlignment(.center)
                                     .padding()
@@ -48,23 +35,52 @@ struct GoalChangerView: View{
                                             .padding(6)
                                     )
                                     .onTapGesture {
+                                        pickedSport = value
+                                        print(pickedSport)
                                         isCurrent = true
-                                    }.alert("Login", isPresented: $isCurrent, actions: {
-                                        TextField("Username", text: $desiredAmount)
+                                    }.alert("Enter desired Goal", isPresented: $isCurrent, actions: {
+                                        TextField("Goal", text: $desiredAmount)
                                         
                                         Button("Submit", action: {
-                                            updateGoal(ofType: trainingViewModel.trainingModel.type, desiredAmount: Int(desiredAmount)!)
+                                            updateGoal(ofType: pickedSport!, desiredAmount: Int(desiredAmount)!)
+                                            desiredAmount = ""
                                         })
                                         Button("Cancel", role: .cancel, action: {
                                             desiredAmount = ""
                                         })
                                     }, message: {
-                                        Text("Please enter your username and password.")
+                                        Text("")
                                     })
                             }
                         }
+                    Text("Steps\n\(userDefaults.integer(forKey: "StepsGoal"))")
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .background(
+                            Circle()
+                                .stroke(Color.blue, lineWidth: 2)
+                                .frame(width: 100, height: 100)
+                                .padding(6)
+                        ).onTapGesture {
+                            pickedSport = "Steps"
+                            print(pickedSport)
+                            isCurrent = true
+                        }.alert("Enter desired Goal", isPresented: $isCurrent, actions: {
+                            TextField("Goal", text: $desiredAmount)
+                            
+                            Button("Submit", action: {
+                                userDefaults.set(Int(desiredAmount)!, forKey: "StepsGoal")
+                                desiredAmount = ""
+                            })
+                            Button("Cancel", role: .cancel, action: {
+                                desiredAmount = ""
+                            })
+                        }, message: {
+                            Text("")
+                        }
+                                )
                     }
-                }
+                
                 Spacer()
                 Button("Press to go back."){
                     dismiss()
@@ -74,7 +90,10 @@ struct GoalChangerView: View{
         }
     
     func updateGoal(ofType: String, desiredAmount: Int){
+        print("UpdateGoal: \(ofType)")
         trainingViewModel.setNewGoal(amount: desiredAmount, type: ofType)
     }
+    
+
         
 }

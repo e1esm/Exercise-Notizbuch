@@ -75,9 +75,11 @@ class TrainingViewModel: ObservableObject{
     public func getStepsGoal()-> Int{
         return trainingModel.goalInSteps
     }
+    /*
     public func setStepsGoal(goal: Int){
         trainingModel.goalInSteps = goal
     }
+     */
     public func getCurrentSteps()-> Int{
         return trainingModel.currentSteps
     }

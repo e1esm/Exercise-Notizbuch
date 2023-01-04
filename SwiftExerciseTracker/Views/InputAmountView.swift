@@ -14,6 +14,7 @@ struct InputAmountView: View{
     @State var amount: String
     @State var showingAlert: Bool
     @State var isNotRightType: Bool
+    @State var isAlreadyPlayed: Bool = false
     var body: some View{
         TextField("Done quantity:", text: $amount){
             showingAlert = amount.isNumeric
@@ -28,9 +29,7 @@ struct InputAmountView: View{
 
         }
         .onSubmit {
-            if(trainingViewModel.getCurrentAmount() == trainingViewModel.getGoalInQuantity()){
                 SoundService.playSounds(soundFile: "mixkit-quick-win-video-game-notification-269")
-            }
             amount = ""
             print(trainingViewModel.trainingModel.type)
         }
