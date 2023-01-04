@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "halfasheet",
+      "identity" : "sqlite.swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/franklynw/HalfASheet",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
       "state" : {
-        "revision" : "4f43296b3722082dd5735521ee0fbf25e61cd21c",
-        "version" : "1.0.2"
+        "branch" : "master",
+        "revision" : "9624b93d1dc493952ecc58b7623ec88ac797f9e6"
       }
     }
   ],

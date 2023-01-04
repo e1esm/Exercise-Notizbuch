@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+
 import UIKit
 import CoreMotion
 struct ContentView: View {
