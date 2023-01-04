@@ -113,6 +113,7 @@ class DBManager{
     
     public func updateDatabase(amountAccomplished: Int, ofType: String, stringOfDate: String){
         var insertStatement: OpaquePointer?
+        print("updateDatabase: \(stringOfDate)")
         let sqlQueryString =
         """
         INSERT INTO Sports_info (current_quantity, inserting_date, sport_id) VALUES

@@ -58,7 +58,7 @@ struct HistoryView: View{
                         ).foregroundStyle(Color(UIColor(red: 0.71, green: 0.95, blue: 0.77, alpha: 1.00)).opacity(1))
                         BarMark(
                             x: .value("Date", String(dates[4].suffix(5))),
-                            y: .value("Amount", trainingViewModel.getWeeklyActivity()[4])
+                            y: .value("Amount", trainingViewModel.getWeeklyActivity()[4 ])
                             
                         ).foregroundStyle(Color(UIColor(red: 0.71, green: 0.95, blue: 0.77, alpha: 1.00)).opacity(1))
                         BarMark(

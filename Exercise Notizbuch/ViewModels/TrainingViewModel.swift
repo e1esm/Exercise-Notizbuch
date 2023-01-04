@@ -50,9 +50,10 @@ class TrainingViewModel: ObservableObject{
 
 
     public func increaseBy(amount: Int) {
+
         trainingModel.currentAmount += amount;
         print("\(trainingModel.currentAmount) in TrainingModel")
-        dbManager.updateDatabase(amountAccomplished: amount, ofType: trainingModel.type, stringOfDate: String(Date().ISO8601Format().prefix(10)))
+        dbManager.updateDatabase(amountAccomplished: amount, ofType: trainingModel.type, stringOfDate: String(Calendar.current.date(byAdding: .day,value: 0, to: Date().noon)!.ISO8601Format().prefix(10)))
         fetchDailyActivity()
         self.objectWillChange.send()
      }

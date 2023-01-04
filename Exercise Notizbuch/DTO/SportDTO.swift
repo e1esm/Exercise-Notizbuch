@@ -28,7 +28,7 @@ class SportDTO: Identifiable{
         return sportType
     }
     public func getCurrentDate() -> String{
-        print(currentDate)
+        print(currentDate, "getCurrentDate")
         return currentDate
     }
     public func getCurrentQuantity() -> Int{
