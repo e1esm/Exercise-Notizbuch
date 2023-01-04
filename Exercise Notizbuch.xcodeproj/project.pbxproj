@@ -20,7 +20,6 @@
 		BC86516029538A9C00712068 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515F29538A9C00712068 /* HistoryView.swift */; };
 		BC86516929538AD000712068 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86516829538AD000712068 /* ProfileView.swift */; };
 		BCCCE196296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */; };
-		BCCCE1A02963438100A44502 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = BCCCE19F2963438100A44502 /* HalfASheet */; };
 		BCCCE1A22963550800A44502 /* GoalChangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A12963550800A44502 /* GoalChangerView.swift */; };
 		BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A42963560100A44502 /* ActiveSports.swift */; };
 		BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AB29635FB400A44502 /* SportService.swift */; };
@@ -125,7 +124,7 @@
 		BCCCE1AB29635FB400A44502 /* SportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportService.swift; sourceTree = "<group>"; };
 		BCCCE1AD2963B07200A44502 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		BCE38A242964F98B00316708 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
-		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFBDEE22949237100E1DB3A /* Exercise Notizbuch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise Notizbuch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BCFBDEE92949237200E1DB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5E2F1F294F5E5A006FEEE2 /* SQLite.framework in Frameworks */,
-				BCCCE1A02963438100A44502 /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +201,7 @@
 		BCFBDED92949237100E1DB3A = {
 			isa = PBXGroup;
 			children = (
-				BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */,
+				BCFBDEE42949237100E1DB3A /* Exercise Notizbuch */,
 				BCFBDEE32949237100E1DB3A /* Products */,
 				BC5E2F1E294F5E5A006FEEE2 /* Frameworks */,
 			);
@@ -212,12 +210,12 @@
 		BCFBDEE32949237100E1DB3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */,
+				BCFBDEE22949237100E1DB3A /* Exercise Notizbuch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */ = {
+		BCFBDEE42949237100E1DB3A /* Exercise Notizbuch */ = {
 			isa = PBXGroup;
 			children = (
 				BC821A2C2965CD1A00BBB533 /* DTO */,
@@ -237,7 +235,7 @@
 				BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */,
 				BCFBDEEB2949237200E1DB3A /* Preview Content */,
 			);
-			path = SwiftExerciseTracker;
+			path = "Exercise Notizbuch";
 			sourceTree = "<group>";
 		};
 		BCFBDEEB2949237200E1DB3A /* Preview Content */ = {
@@ -303,9 +301,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BCFBDEE12949237100E1DB3A /* SwiftExerciseTracker */ = {
+		BCFBDEE12949237100E1DB3A /* Exercise Notizbuch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "SwiftExerciseTracker" */;
+			buildConfigurationList = BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "Exercise Notizbuch" */;
 			buildPhases = (
 				BCFBDEDE2949237100E1DB3A /* Sources */,
 				BCFBDEDF2949237100E1DB3A /* Frameworks */,
@@ -316,12 +314,11 @@
 			);
 			dependencies = (
 			);
-			name = SwiftExerciseTracker;
+			name = "Exercise Notizbuch";
 			packageProductDependencies = (
-				BCCCE19F2963438100A44502 /* HalfASheet */,
 			);
 			productName = SwiftExerciseTracker;
-			productReference = BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */;
+			productReference = BCFBDEE22949237100E1DB3A /* Exercise Notizbuch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "SwiftExerciseTracker" */;
+			buildConfigurationList = BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "Exercise Notizbuch" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -349,7 +346,6 @@
 			);
 			mainGroup = BCFBDED92949237100E1DB3A;
 			packageReferences = (
-				BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */,
 			);
 			productRefGroup = BCFBDEE32949237100E1DB3A /* Products */;
 			projectDirPath = "";
@@ -361,7 +357,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				BCFBDEE12949237100E1DB3A /* SwiftExerciseTracker */,
+				BCFBDEE12949237100E1DB3A /* Exercise Notizbuch */,
 			);
 		};
 /* End PBXProject section */
@@ -588,11 +584,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftExerciseTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Exercise Notizbuch/Preview Content\"";
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftExerciseTracker/Info.plist;
+				INFOPLIST_FILE = "Exercise Notizbuch/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -604,7 +600,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esm.SwiftExerciseTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esm.ExerciseNotizbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -619,11 +615,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftExerciseTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Exercise Notizbuch/Preview Content\"";
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftExerciseTracker/Info.plist;
+				INFOPLIST_FILE = "Exercise Notizbuch/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app requires to accept Motion data to track your steps";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -635,7 +631,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esm.SwiftExerciseTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esm.ExerciseNotizbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,7 +642,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "SwiftExerciseTracker" */ = {
+		BCFBDEDD2949237100E1DB3A /* Build configuration list for PBXProject "Exercise Notizbuch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BCFBDEF32949237200E1DB3A /* Debug */,
@@ -655,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "SwiftExerciseTracker" */ = {
+		BCFBDEF52949237200E1DB3A /* Build configuration list for PBXNativeTarget "Exercise Notizbuch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BCFBDEF62949237200E1DB3A /* Debug */,
@@ -665,25 +661,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/franklynw/HalfASheet";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BCCCE19F2963438100A44502 /* HalfASheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BCCCE19E2963438100A44502 /* XCRemoteSwiftPackageReference "HalfASheet" */;
-			productName = HalfASheet;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BCFBDEF02949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld */ = {
