@@ -47,6 +47,13 @@
 			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
 			remoteInfo = "SQLite iOS";
 		};
+		BC1943562966236700CC6BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247ADC1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
 		BC5E2F10294F5E32006FEEE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC5E2ED8294F5E1D006FEEE2 /* SQLite.xcodeproj */;
@@ -320,6 +327,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BC1943572966236700CC6BA0 /* PBXTargetDependency */,
 				BC194355296622DC00CC6BA0 /* PBXTargetDependency */,
 			);
 			name = "Exercise Notizbuch";
@@ -475,6 +483,11 @@
 			isa = PBXTargetDependency;
 			name = "SQLite iOS";
 			targetProxy = BC194354296622DC00CC6BA0 /* PBXContainerItemProxy */;
+		};
+		BC1943572966236700CC6BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLiteTests iOS";
+			targetProxy = BC1943562966236700CC6BA0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
