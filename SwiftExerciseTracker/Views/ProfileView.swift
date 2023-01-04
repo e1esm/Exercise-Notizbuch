@@ -19,7 +19,7 @@ struct ProfileView: View{
     var body: some View{
         VStack(){
             Rectangle()
-                .padding(-80)
+                .padding(-90)
                 .foregroundColor(Color(red: 0.88, green: 0.87, blue: 0.87))
                 .frame(width: UIScreen.main.bounds.width, height: 50)
                 .ignoresSafeArea()

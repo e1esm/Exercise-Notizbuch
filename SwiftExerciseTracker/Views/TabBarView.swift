@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TabViewScreen: View{
-    
+    @EnvironmentObject private var trainingViewModel: TrainingViewModel
     init(){
         UITabBar.appearance().backgroundColor = UIColor(Color(red: 0.88, green: 0.87, blue: 0.87))
         UITabBar.appearance().barTintColor = UIColor(Color(red: 0.88, green: 0.87, blue: 0.87))
@@ -25,6 +25,7 @@ struct TabViewScreen: View{
                     }
                 }
             HistoryView()
+                .environmentObject(self.trainingViewModel)
                 .tabItem(){
                     ZStack{
                         Image(systemName: "clock.circle")

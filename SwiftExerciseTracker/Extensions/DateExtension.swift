@@ -14,4 +14,7 @@ extension Date{
             let days2 = calendar.component(component, from: date)
             return days1 - days2
         }
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
+    }
 }

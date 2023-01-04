@@ -14,7 +14,7 @@ class SportRepository{
         "Sit-ups": true,
         "Abs": true,
         "Lunges": true,
-        "Pull-Ups": true,
+        "Pull-ups": true,
         "Burpee": true
         ]
     init(){

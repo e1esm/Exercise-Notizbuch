@@ -23,6 +23,7 @@ class UserViewModel: ObservableObject{
             userDefaults.set(true, forKey: "isSoundPlayed")
             saveProfileImage(newProfileImage: UIImage(named: "profileImage")!)
             //userDefaults.set(UIImage(named: "profileImage"), forKey: "profileImage")
+            //userDefaults.set("Sit-ups", forKey: "lastSet")
             userDefaults.set(DateFormatter().string(from: Date()), forKey: "lastOpening")
             self.userModel = UserModel(true,sound: true, nickname: username, profilePhoto: UIImage(named: "profileImage")!)
         }else{

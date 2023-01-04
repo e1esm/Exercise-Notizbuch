@@ -10,20 +10,29 @@ import SQLite3
 
 
 class TrainingViewModel: ObservableObject{
-    
-
+    private var weeklyActivity: [Int]
+    private var chartService: ChartService
     var dbManager: DBManager
     var trainingModel: TrainingModel
     
     init(){
+        weeklyActivity = []
+        chartService = ChartService()
         self.dbManager = DBManager.instance
         self.trainingModel = TrainingModel()
+        trainingModel.currentAmount = dbManager.fetchTodayData(ofSport: trainingModel.type)
+        setWeekActivity(ofType: trainingModel.type)
+        
+    }
+    public func getChartServiceInstane() -> ChartService {
+        return chartService
     }
     
     
     public func updateCurrentAmount(type: String){
         trainingModel.type = type
         trainingModel.currentAmount = 0
+        trainingModel.currentAmount = dbManager.fetchTodayData(ofSport: trainingModel.type)
         self.objectWillChange.send()
     }
     
@@ -41,6 +50,7 @@ class TrainingViewModel: ObservableObject{
     public func increaseBy(amount: Int) {
         trainingModel.currentAmount += amount;
         print("\(trainingModel.currentAmount) in TrainingModel")
+        dbManager.updateDatabase(amountAccomplished: amount, ofType: trainingModel.type, stringOfDate: String(Date().ISO8601Format().prefix(10)))
         self.objectWillChange.send()
      }
 
@@ -55,6 +65,7 @@ class TrainingViewModel: ObservableObject{
      }
     
     public func getGoalInQuantity()->Int{
+        trainingModel.goalInQuantity = UserDefaults.standard.integer(forKey: "\(trainingModel.type)Goal")
         return trainingModel.goalInQuantity
     }
     
@@ -71,6 +82,23 @@ class TrainingViewModel: ObservableObject{
         trainingModel.currentSteps = steps
         self.objectWillChange.send()
     }
-
+    
+    public func setNewGoal(amount: Int, type: String){
+        UserDefaults.standard.set(amount, forKey: "\(type)Goal")
+        self.objectWillChange.send()
+    }
+    
+    public func setWeekActivity(ofType: String){
+        weeklyActivity = dbManager.getActivityDuringWeek(ofType: ofType,datesArray: chartService.weekArray)
+        self.objectWillChange.send()
+        
+    }
+    
+    public func getWeekDatesArray() -> [String]{
+        return chartService.weekArray
+    }
+    public func getWeeklyActivity() -> [Int]{
+        return weeklyActivity
+    }
     
 }

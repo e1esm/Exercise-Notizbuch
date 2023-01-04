@@ -13,8 +13,9 @@ struct SportPicker: View{
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var sportService: SportService
-    @State private var currentSport = "Sit-ups"
+    @State private var currentSport = UserDefaults.standard.string(forKey: "lastSet")!
     @State private var nonwriteable: Bool
+    private var userDefaults = UserDefaults.standard
     var sportOptions: [String]{
         get{
             initSportArray()
@@ -43,6 +44,7 @@ struct SportPicker: View{
             .accentColor(.black)
             .onChange(of: currentSport){newValue in
                 trainingViewModel.updateCurrentAmount(type: newValue)
+                userDefaults.set(newValue, forKey: "lastSet")
             }
             .pickerStyle(.menu)
         }

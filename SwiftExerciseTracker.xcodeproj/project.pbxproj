@@ -24,6 +24,8 @@
 		BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A42963560100A44502 /* ActiveSports.swift */; };
 		BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AB29635FB400A44502 /* SportService.swift */; };
 		BCCCE1AE2963B07300A44502 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AD2963B07200A44502 /* SoundService.swift */; };
+		BCE38A252964F98B00316708 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE38A242964F98B00316708 /* ChartService.swift */; };
+		BCE38A272965090800316708 /* ChartPickingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE38A262965090800316708 /* ChartPickingOptions.swift */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
 		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
@@ -121,6 +123,8 @@
 		BCCCE1A42963560100A44502 /* ActiveSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSports.swift; sourceTree = "<group>"; };
 		BCCCE1AB29635FB400A44502 /* SportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportService.swift; sourceTree = "<group>"; };
 		BCCCE1AD2963B07200A44502 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		BCE38A242964F98B00316708 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
+		BCE38A262965090800316708 /* ChartPickingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPickingOptions.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			children = (
 				BCCCE1AB29635FB400A44502 /* SportService.swift */,
 				BCCCE1AD2963B07200A44502 /* SoundService.swift */,
+				BCE38A242964F98B00316708 /* ChartService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				BC44273629624B0200CB9E71 /* MainView.swift */,
 				BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */,
 				BCCCE1A12963550800A44502 /* GoalChangerView.swift */,
+				BCE38A262965090800316708 /* ChartPickingOptions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -432,10 +438,12 @@
 				BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */,
 				BC44273729624B0200CB9E71 /* MainView.swift in Sources */,
 				BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */,
+				BCE38A272965090800316708 /* ChartPickingOptions.swift in Sources */,
 				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
 				BCFBDF042949412700E1DB3A /* SportPicker.swift in Sources */,
 				BCFBDEF22949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld in Sources */,
 				BCFBDEFE294924B000E1DB3A /* TrainingModel.swift in Sources */,
+				BCE38A252964F98B00316708 /* ChartService.swift in Sources */,
 				BCFBDF0E294A21B600E1DB3A /* StringExtensions.swift in Sources */,
 				BC86516929538AD000712068 /* ProfileView.swift in Sources */,
 				BCFBDF022949368A00E1DB3A /* QuantityProgressView.swift in Sources */,

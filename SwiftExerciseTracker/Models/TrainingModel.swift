@@ -29,7 +29,16 @@ class TrainingModel{
         currentAmountForProgressBar = 0
         goalInQuantity = 100
         goalInSteps = 1000
-        type = "Sit-ups"
+        if (UserDefaults.standard.string(forKey: "lastSet")) == nil {
+            type = "Sit-ups"
+            let sportRepoKeys = UserDefaults.standard.object(forKey: "activeSports") as! [String: Bool]
+            for sport in Array(sportRepoKeys.keys){
+                UserDefaults.standard.set(100, forKey: "\(sport)Goal")
+            }
+            UserDefaults.standard.set(type, forKey: "lastSet")
+        }else{
+            type = UserDefaults.standard.string(forKey: "lastSet")!
+        }
         self.currentSteps = 0
     }
 }
