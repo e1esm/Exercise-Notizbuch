@@ -15,6 +15,7 @@
 		BC5E2F23294F6C3A006FEEE2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */; };
 		BC5E2F25294F731E006FEEE2 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */; };
 		BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */; };
+		BC821A2E2965CD3900BBB533 /* SportDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821A2D2965CD3900BBB533 /* SportDTO.swift */; };
 		BC86515D2953504300712068 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515C2953504300712068 /* TabBarView.swift */; };
 		BC86516029538A9C00712068 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86515F29538A9C00712068 /* HistoryView.swift */; };
 		BC86516929538AD000712068 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86516829538AD000712068 /* ProfileView.swift */; };
@@ -25,7 +26,6 @@
 		BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AB29635FB400A44502 /* SportService.swift */; };
 		BCCCE1AE2963B07300A44502 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AD2963B07200A44502 /* SoundService.swift */; };
 		BCE38A252964F98B00316708 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE38A242964F98B00316708 /* ChartService.swift */; };
-		BCE38A272965090800316708 /* ChartPickingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE38A262965090800316708 /* ChartPickingOptions.swift */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
 		BCFBDEEA2949237200E1DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFBDEE92949237200E1DB3A /* Assets.xcassets */; };
@@ -115,6 +115,7 @@
 		BC5E2F22294F6C3A006FEEE2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BC5E2F24294F731E006FEEE2 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BC821A2D2965CD3900BBB533 /* SportDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDTO.swift; sourceTree = "<group>"; };
 		BC86515C2953504300712068 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		BC86515F29538A9C00712068 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BC86516829538AD000712068 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -124,7 +125,6 @@
 		BCCCE1AB29635FB400A44502 /* SportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportService.swift; sourceTree = "<group>"; };
 		BCCCE1AD2963B07200A44502 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		BCE38A242964F98B00316708 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
-		BCE38A262965090800316708 /* ChartPickingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPickingOptions.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* SwiftExerciseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExerciseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
 		BCFBDEE72949237100E1DB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -174,6 +174,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC821A2C2965CD1A00BBB533 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BC821A2D2965CD3900BBB533 /* SportDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		BCCCE1A3296355EA00A44502 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +220,7 @@
 		BCFBDEE42949237100E1DB3A /* SwiftExerciseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				BC821A2C2965CD1A00BBB533 /* DTO */,
 				BCCCE1AA29635FAB00A44502 /* Services */,
 				BCCCE1A3296355EA00A44502 /* Constant */,
 				BC44273529624A3700CB9E71 /* Info.plist */,
@@ -278,7 +287,6 @@
 				BC44273629624B0200CB9E71 /* MainView.swift */,
 				BCCCE195296334C300A44502 /* SettingsSportTypesAvailabilityPicker.swift */,
 				BCCCE1A12963550800A44502 /* GoalChangerView.swift */,
-				BCE38A262965090800316708 /* ChartPickingOptions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,10 +446,10 @@
 				BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */,
 				BC44273729624B0200CB9E71 /* MainView.swift in Sources */,
 				BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */,
-				BCE38A272965090800316708 /* ChartPickingOptions.swift in Sources */,
 				BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */,
 				BCFBDF042949412700E1DB3A /* SportPicker.swift in Sources */,
 				BCFBDEF22949237200E1DB3A /* SwiftExerciseTracker.xcdatamodeld in Sources */,
+				BC821A2E2965CD3900BBB533 /* SportDTO.swift in Sources */,
 				BCFBDEFE294924B000E1DB3A /* TrainingModel.swift in Sources */,
 				BCE38A252964F98B00316708 /* ChartService.swift in Sources */,
 				BCFBDF0E294A21B600E1DB3A /* StringExtensions.swift in Sources */,

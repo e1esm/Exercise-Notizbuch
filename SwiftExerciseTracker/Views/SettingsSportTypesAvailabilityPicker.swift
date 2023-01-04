@@ -58,7 +58,7 @@ struct SheetSportPickerView : View{
                 }
             }
             Spacer()
-            Button("Press to dismiss"){
+            Button("Press to go back."){
                 dismiss()
             }
         }.frame(width: UIScreen.main.bounds.width).background(Color(red: 0.97, green: 0.95, blue: 0.95))

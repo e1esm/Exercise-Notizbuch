@@ -10,6 +10,7 @@ import SQLite3
 
 class DBManager{
     static let instance = DBManager()
+
     var database: OpaquePointer?
     var path = "myDb.sqlite"
     
@@ -170,5 +171,25 @@ class DBManager{
         sqlite3_finalize(queryStatement)
         
         return activityOfWeek
+    }
+    
+    public func getActivity(ofDate: String) -> [SportDTO]{
+        var dayActivity: [SportDTO] = []
+        var queryStatement: OpaquePointer?
+        let sqlQueryString: String =
+        """
+        SELECT current_quantity, inserting_date, sport_type_name
+        FROM Sports_info, Sport_types WHERE inserting_date == '\(ofDate)' AND
+        Sports_info.sport_id = Sport_types.sport_type_id;
+        """
+        if sqlite3_prepare_v2(database, sqlQueryString, -1, &queryStatement, nil) == SQLITE_OK{
+            while(sqlite3_step(queryStatement) == SQLITE_ROW){
+                let activity = Int(sqlite3_column_int(queryStatement,0))
+                let date = String(cString: sqlite3_column_text(queryStatement, 1))
+                let sportType = String(cString: sqlite3_column_text(queryStatement, 2))
+                dayActivity.append(SportDTO(sportType: sportType, currentQuantity: activity, currentDate: date))
+            }
+        }
+        return dayActivity
     }
 }

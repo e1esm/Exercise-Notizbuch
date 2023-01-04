@@ -11,6 +11,7 @@ import SQLite3
 
 class TrainingViewModel: ObservableObject{
     private var weeklyActivity: [Int]
+     var dailyActivity = [String: [SportDTO]]()
     private var chartService: ChartService
     var dbManager: DBManager
     var trainingModel: TrainingModel
@@ -22,6 +23,7 @@ class TrainingViewModel: ObservableObject{
         self.trainingModel = TrainingModel()
         trainingModel.currentAmount = dbManager.fetchTodayData(ofSport: trainingModel.type)
         setWeekActivity(ofType: trainingModel.type)
+        fetchDailyActivity()
         
     }
     public func getChartServiceInstane() -> ChartService {
@@ -51,6 +53,7 @@ class TrainingViewModel: ObservableObject{
         trainingModel.currentAmount += amount;
         print("\(trainingModel.currentAmount) in TrainingModel")
         dbManager.updateDatabase(amountAccomplished: amount, ofType: trainingModel.type, stringOfDate: String(Date().ISO8601Format().prefix(10)))
+        fetchDailyActivity()
         self.objectWillChange.send()
      }
 
@@ -98,7 +101,21 @@ class TrainingViewModel: ObservableObject{
         return chartService.weekArray
     }
     public func getWeeklyActivity() -> [Int]{
+        
         return weeklyActivity
     }
     
+    public func fetchDailyActivity(){
+        for (index, date) in chartService.weekArray.enumerated(){
+            print(date)
+            dailyActivity[date] = dbManager.getActivity(ofDate: date)
+           // dailyActivity[index] = dbManager.getActivity(ofDate: date)
+        }
+        //print(dailyActivity[date][0])
+        self.objectWillChange.send()
+    }
+    
+    public func getArrayOfWeekActivities() -> [SportDTO]{
+        return Array(dailyActivity.values.joined())
+    }
 }
