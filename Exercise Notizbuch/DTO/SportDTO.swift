@@ -7,31 +7,34 @@
 
 import Foundation
 
-class SportDTO: Identifiable{
+class SportDTO: Identifiable {
     let id = UUID()
     private var sportType: String
     private var currentQuantity: Int
     private var currentDate: String
-    
-    init(){
+
+    init() {
         currentDate = ""
         sportType = ""
         currentQuantity = 0
     }
-    init(sportType: String, currentQuantity: Int, currentDate: String){
+
+    init(sportType: String, currentQuantity: Int, currentDate: String) {
         self.currentQuantity = currentQuantity
         self.sportType = sportType
         self.currentDate = currentDate
     }
-    
-    public func getSportType() -> String{
-        return sportType
+
+    public func getSportType() -> String {
+        sportType
     }
-    public func getCurrentDate() -> String{
+
+    public func getCurrentDate() -> String {
         print(currentDate, "getCurrentDate")
         return currentDate
     }
-    public func getCurrentQuantity() -> Int{
-        return currentQuantity
+
+    public func getCurrentQuantity() -> Int {
+        currentQuantity
     }
 }

@@ -8,50 +8,45 @@
 import Foundation
 import SwiftUI
 
-
-struct SportPicker: View{
+struct SportPicker: View {
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var sportService: SportService
     @State private var currentSport = UserDefaults.standard.string(forKey: "lastSet")!
     @State private var nonwriteable: Bool
     private var userDefaults = UserDefaults.standard
-    var sportOptions: [String]{
-        get{
-            initSportArray()
-        }
+    var sportOptions: [String] {
+        initSportArray()
     }
-    
-    init(){
+
+    init() {
         nonwriteable = false
     }
-    
-    
-    //let sportOptions = Array(SportRepository.activeSport.keys)
+
+    // let sportOptions = Array(SportRepository.activeSport.keys)
     /*
-    let sportOptions = [    "Sit-ups",
-                             "Push-ups",
-                             "Abs",
-                             "Lunges",]
-    */
-    var body: some View{
-        VStack{
-            Picker("Sport:", selection: $currentSport){
-                ForEach(sportOptions, id: \.self){
+     let sportOptions = [    "Sit-ups",
+                              "Push-ups",
+                              "Abs",
+                              "Lunges",]
+     */
+    var body: some View {
+        VStack {
+            Picker("Sport:", selection: $currentSport) {
+                ForEach(sportOptions, id: \.self) {
                     Text($0)
                 }
             }
             .accentColor(.black)
-            .onChange(of: currentSport){newValue in
+            .onChange(of: currentSport) { newValue in
                 trainingViewModel.updateCurrentAmount(type: newValue)
                 userDefaults.set(newValue, forKey: "lastSet")
             }
             .pickerStyle(.menu)
         }
-        
     }
-    
-    func initSportArray() -> [String]{
-        return sportService.activeSport
+
+    func initSportArray() -> [String] {
+        sportService.activeSport
     }
 }

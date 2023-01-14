@@ -8,27 +8,27 @@
 import Foundation
 import SwiftUI
 
-struct ChartPickingView: View{
+struct ChartPickingView: View {
     @EnvironmentObject var trainingViewModel: TrainingViewModel
     @EnvironmentObject var sportService: SportService
     @State private var currentSport = "Sit-ups"
     @State private var sportOptions: [String]?
-    init(){
+    init() {
         sportOptions = Array(sportService.sportRepository.activeSport.keys)
     }
-    var body: some View{
-            VStack{
-                Picker("Sport:", selection: $currentSport){
-                    ForEach(sportOptions!, id: \.self){
-                        Text($0)
-                    }
+
+    var body: some View {
+        VStack {
+            Picker("Sport:", selection: $currentSport) {
+                ForEach(sportOptions!, id: \.self) {
+                    Text($0)
                 }
-                .accentColor(.black)
-                .onChange(of: currentSport){newValue in
-                    trainingViewModel.setWeekActivity(ofType: newValue)
-                }
-                .pickerStyle(.menu)
             }
-            
+            .accentColor(.black)
+            .onChange(of: currentSport) { newValue in
+                trainingViewModel.setWeekActivity(ofType: newValue)
+            }
+            .pickerStyle(.menu)
         }
     }
+}

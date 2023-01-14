@@ -5,26 +5,23 @@
 //  Created by Егор Михайлов on 03.01.2023.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 import UIKit
 
-class SoundService: ObservableObject{
+class SoundService: ObservableObject {
     static var audioPlayer: AVAudioPlayer?
-    
-    
-    
-     static func playSounds(soundFile: String){
+
+    static func playSounds(soundFile: String) {
         print("Func to play sound")
-        guard let audioData = NSDataAsset(name: soundFile)?.data else{
+        guard let audioData = NSDataAsset(name: soundFile)?.data else {
             fatalError("Unable to play sound")
         }
-        do{
+        do {
             audioPlayer = try AVAudioPlayer(data: audioData)
             audioPlayer?.play()
-        }catch{
+        } catch {
             print("Can't play exported sound")
         }
     }
-    
 }

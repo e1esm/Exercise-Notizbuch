@@ -7,31 +7,31 @@
 
 import Foundation
 
-class SportService: ObservableObject{
+class SportService: ObservableObject {
     var userDefaults = UserDefaults.standard
     var sportRepository = SportRepository()
     var activeSport: [String]
-    
-    init(){
+
+    init() {
         activeSport = []
         userDefaults.set(sportRepository.activeSport, forKey: "activeSports")
         updateActiveSportArray()
     }
-    
-    func updateActiveSportArray(){
+
+    func updateActiveSportArray() {
         activeSport.removeAll()
         let activeDictionary: [String: Bool] = userDefaults.object(forKey: "activeSports") as! [String: Bool]
-        for (key, value) in activeDictionary{
-            if value == true{
+        for (key, value) in activeDictionary {
+            if value == true {
                 activeSport.append(key)
             }
         }
     }
-    
-    func changeStateOfSportArray(key: String, state: Bool){
+
+    func changeStateOfSportArray(key: String, state: Bool) {
         sportRepository.activeSport[key] = state
         userDefaults.set(sportRepository.activeSport, forKey: "activeSports")
         updateActiveSportArray()
-        self.objectWillChange.send()
+        objectWillChange.send()
     }
 }

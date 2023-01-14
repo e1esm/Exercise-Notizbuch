@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct InvalidInputAlertView: View{
-    var body: some View{
+struct InvalidInputAlertView: View {
+    var body: some View {
         Alert(
             title: Text("Invalid input"),
             message: Text("You entered invalid number, try another one."),
             dismissButton: .default(Text("Got it!"))
         )
-        }
     }
+}

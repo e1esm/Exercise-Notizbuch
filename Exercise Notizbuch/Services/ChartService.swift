@@ -7,19 +7,19 @@
 
 import Foundation
 
-class ChartService{
+class ChartService {
     var weekArray: [String]
-    
-    init(){
+
+    init() {
         weekArray = []
         weekArray = convertDateArrayToStringArray()
     }
-    
-    func convertDateArrayToStringArray() -> [String]{
-        var noon: Date = Date().noon
+
+    func convertDateArrayToStringArray() -> [String] {
+        var noon = Date().noon
         var dateArray: [String] = []
-        for i in -6...0 {
-                dateArray.append(String(Calendar.current.date(byAdding: .day, value: i, to: noon)!.ISO8601Format().prefix(10)))
+        for i in -6 ... 0 {
+            dateArray.append(String(Calendar.current.date(byAdding: .day, value: i, to: noon)!.ISO8601Format().prefix(10)))
         }
         print(dateArray, "hey")
         return dateArray

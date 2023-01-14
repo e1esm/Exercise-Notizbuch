@@ -14,10 +14,10 @@ struct SwiftExerciseTrackerApp: App {
     @StateObject private var trainingViewModel = TrainingViewModel()
     @StateObject private var userViewModel = UserViewModel()
     var body: some Scene {
-        WindowGroup{
-                ContentView().environmentObject(userViewModel)
+        WindowGroup {
+            ContentView().environmentObject(userViewModel)
                 .environmentObject(sportService)
                 .environmentObject(trainingViewModel)
-            }
         }
+    }
 }
