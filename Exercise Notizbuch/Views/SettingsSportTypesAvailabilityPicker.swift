@@ -36,6 +36,7 @@ struct SheetSportPickerView: View {
                                 }
                         } else {
                             Text(value)
+                                .foregroundColor(.black)
                                 .padding()
                                 .background(
                                     Circle()

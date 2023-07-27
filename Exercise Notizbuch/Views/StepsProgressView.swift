@@ -43,6 +43,7 @@ struct StepsProgressView: View {
                 .overlay(
                     Text("\(trainingViewModel.getCurrentSteps()) / \(trainingViewModel.getStepsGoal())".replacingOccurrences(of: ",", with: ""))
                         .font(.title2)
+                        .foregroundColor(.black)
                 )
 
             Circle()

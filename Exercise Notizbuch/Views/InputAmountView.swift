@@ -27,8 +27,11 @@ struct InputAmountView: View {
             }
             print("====\n\(trainingViewModel.getCurrentAmount()) in InputAmountView and \(amount) in IAV")
         }
+        .foregroundColor(.black)
         .onSubmit {
-            SoundService.playSounds(soundFile: "mixkit-quick-win-video-game-notification-269")
+            if amount != "" {
+                SoundService.playSounds(soundFile: "mixkit-quick-win-video-game-notification-269")
+            }
             amount = ""
             print(trainingViewModel.trainingModel.type)
         }

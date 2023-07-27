@@ -46,7 +46,7 @@ class TrainingViewModel: ObservableObject {
     }
 
     public func increaseBy(amount: Int) {
-        if(amount == 0){
+        if amount == 0 {
             return
         }
         trainingModel.currentAmount += amount

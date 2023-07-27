@@ -25,6 +25,7 @@ struct GoalChangerView: View {
                 LazyVGrid(columns: columns, spacing: 70) {
                     ForEach(Array(sportService.sportRepository.activeSport.keys), id: \.self) { value in
                         Text("\(value)\n\(userDefaults.integer(forKey: "\(value)Goal"))")
+                            .foregroundColor(.black)
                             .multilineTextAlignment(.center)
                             .padding()
                             .background(
@@ -55,6 +56,7 @@ struct GoalChangerView: View {
                 Spacer()
                     .frame(minHeight: 10, maxHeight: 20)
                 Text("Steps\n\(userDefaults.integer(forKey: "StepsGoal"))")
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .padding()
                     .background(

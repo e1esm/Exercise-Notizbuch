@@ -24,6 +24,7 @@ struct QuantityProgressView: View {
                 .overlay(
                     Text("\(trainingViewModel.getCurrentAmount()) / \(trainingViewModel.getGoalInQuantity())")
                         .font(.title2)
+                        .foregroundColor(.black)
                 )
             if trainingViewModel.getCurrentAmount() < 100 {
                 Circle()

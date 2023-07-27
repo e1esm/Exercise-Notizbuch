@@ -48,6 +48,7 @@ struct ProfileView: View {
                                 .font(.title2
                                     .weight(.bold))
                                 .frame(width: 100)
+                                .foregroundColor(.black)
                         }.frame(alignment: .bottom)
                     }
                 )
@@ -61,6 +62,7 @@ struct ProfileView: View {
                 .overlay(
                     HStack(spacing: 100) {
                         Text("Pick active sport")
+                            .foregroundColor(.black)
                         ZStack {
                             Button("Show sheet") {
                                 isShowingActiveSheet.toggle()
@@ -81,6 +83,7 @@ struct ProfileView: View {
                         Spacer()
                             .frame(width: 5)
                         Text("Change nickname")
+                            .foregroundColor(.black)
                             .frame(width: 150)
                         Spacer()
                             .frame(width: 100)
@@ -88,6 +91,7 @@ struct ProfileView: View {
                             userViewModel.updateUserName(newUsername: newUsername)
                             newUsername = ""
                         }.frame(width: 100)
+                            .foregroundColor(.black)
                     }
                 )
             Spacer()
@@ -99,6 +103,7 @@ struct ProfileView: View {
                 .overlay(
                     HStack(spacing: 110) {
                         Text("Change goals")
+                            .foregroundColor(.black)
                         ZStack {
                             Button("Show sheet") {
                                 isShowingGoalSheet.toggle()
@@ -110,7 +115,6 @@ struct ProfileView: View {
                 )
 
             Spacer()
-            Text("Version 0.0.0")
 
         }.background(Color(red: 0.97, green: 0.95, blue: 0.95))
     }

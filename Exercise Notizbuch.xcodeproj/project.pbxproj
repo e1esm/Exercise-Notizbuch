@@ -23,6 +23,7 @@
 		BCCCE1A52963560100A44502 /* ActiveSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1A42963560100A44502 /* ActiveSports.swift */; };
 		BCCCE1AC29635FB400A44502 /* SportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AB29635FB400A44502 /* SportService.swift */; };
 		BCCCE1AE2963B07300A44502 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCE1AD2963B07200A44502 /* SoundService.swift */; };
+		BCE0D0F229724E020062C7DC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D0F129724E020062C7DC /* UIApplicationExtensions.swift */; };
 		BCE38A252964F98B00316708 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE38A242964F98B00316708 /* ChartService.swift */; };
 		BCFBDEE62949237100E1DB3A /* SwiftExerciseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */; };
 		BCFBDEE82949237100E1DB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBDEE72949237100E1DB3A /* ContentView.swift */; };
@@ -68,6 +69,7 @@
 		BCCCE1A42963560100A44502 /* ActiveSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSports.swift; sourceTree = "<group>"; };
 		BCCCE1AB29635FB400A44502 /* SportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportService.swift; sourceTree = "<group>"; };
 		BCCCE1AD2963B07200A44502 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		BCE0D0F129724E020062C7DC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		BCE38A242964F98B00316708 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
 		BCFBDEE22949237100E1DB3A /* Exercise Notizbuch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise Notizbuch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFBDEE52949237100E1DB3A /* SwiftExerciseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseTrackerApp.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				BCFBDF0D294A21B600E1DB3A /* StringExtensions.swift */,
 				BC5E2F27294FA3D9006FEEE2 /* DateExtension.swift */,
+				BCE0D0F129724E020062C7DC /* UIApplicationExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE0D0F229724E020062C7DC /* UIApplicationExtensions.swift in Sources */,
 				BCFBDEEF2949237200E1DB3A /* Persistence.swift in Sources */,
 				BC5E2F28294FA3D9006FEEE2 /* DateExtension.swift in Sources */,
 				BC86515D2953504300712068 /* TabBarView.swift in Sources */,
@@ -457,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise Notizbuch/Preview Content\"";
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
@@ -473,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esm.ExerciseNotizbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -491,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise Notizbuch/Preview Content\"";
 				DEVELOPMENT_TEAM = XLYPL49XW6;
 				ENABLE_PREVIEWS = YES;
@@ -507,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esm.ExerciseNotizbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
